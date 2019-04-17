@@ -31,7 +31,8 @@ public class Point implements Collider /* super class and interfaces here if nec
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Point point = (Point) o;
-        return x == point.x && y == point.y;
+        return x == point.x
+                && y == point.y;
     }
 
     @Override
