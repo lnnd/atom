@@ -87,10 +87,7 @@ public class Bar implements Collider {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bar bar = (Bar) o;
-        return leftX == bar.leftX &&
-                rightX == bar.rightX &&
-                upY == bar.upY &&
-                downY == bar.downY;
+        return leftX == bar.leftX && rightX == bar.rightX && upY == bar.upY && downY == bar.downY;
     }
 
     @Override
