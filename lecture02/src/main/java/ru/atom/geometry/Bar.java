@@ -41,21 +41,21 @@ public class Bar implements Collider {
 
     public boolean checkRect(Bar other) {
 
-        int o_leftX = other.getLeftX();
-        int o_rightX = other.getRightX();
-        int o_upY = other.getUpY();
-        int o_downY = other.getDownY();
+        int oLeftX = other.getLeftX();
+        int oRightX = other.getRightX();
+        int oUpY = other.getUpY();
+        int oDownY = other.getDownY();
 
-        if (leftX > o_rightX || rightX < o_leftX)
+        if (leftX > oRightX || rightX < oLeftX)
             return false;
-        if (upY < o_downY || downY > o_upY)
+        if (upY < oDownY || downY > oUpY)
             return false;
 
         return true;
     }
 
     public boolean checkPoint(int x, int y){
-        return leftX <= x & x <= rightX & upY >= y & y >= downY;
+        return leftX <= x && x <= rightX & upY >= y && y >= downY;
     }
 
     public Point getFirstCorner() {
